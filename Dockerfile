@@ -9,7 +9,7 @@ RUN npm install -g pnpm typescript ts-node
 COPY pnpm-workspace.yaml ./
 COPY package.json ./
 COPY pnpm-lock.yaml ./
-
+COPY package*.json tsconfig.json ./
 
 # Copiar los archivos de configuración del agro-repo-plots
 COPY apps/agro-repo-plots/package.json apps/agro-repo-plots/
