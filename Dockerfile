@@ -1,6 +1,6 @@
 # ./apps/agro-repo-plots/Dockerfile
 FROM node:18
-WORKDIR /app
+WORKDIR /app   
 
 # Instalar pnpm globalmente y TypeScript
 RUN npm install -g pnpm typescript ts-node
