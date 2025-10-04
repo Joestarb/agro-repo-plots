@@ -11,6 +11,10 @@ COPY package.json ./
 COPY pnpm-lock.yaml ./
 COPY package*.json tsconfig.json ./
 
+# Copiar configuración base de TypeScript
+COPY tsconfig.json ./
+
+
 # Copiar los archivos de configuración del agro-repo-plots
 COPY apps/agro-repo-plots/package.json apps/agro-repo-plots/
 
