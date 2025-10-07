@@ -7,6 +7,10 @@ export const findAll = async (): Promise<Parcela[]> => {
   return await parcelaRepo.find();
 };
 
+export const findInactive = async (): Promise<Parcela[]> => {
+  return await parcelaRepo.find({ where: { activa: false } });
+};
+
 export const findById = async (id: number): Promise<Parcela | null> => {
   return await parcelaRepo.findOneBy({ id });
 };
