@@ -11,6 +11,16 @@ export const getParcelas = async (_req: Request, res: Response) => {
   }
 };
 
+// Obtener parcelas inactivas
+export const getParcelasInactivas = async (_req: Request, res: Response) => {
+  try {
+    const parcelas = await parcelaService.findInactive();
+    res.json(parcelas);
+  } catch (error) {
+    res.status(500).json({ message: "Error al obtener parcelas inactivas", error });
+  }
+};
+
 // Obtener una parcela por ID
 export const getParcelaById = async (req: Request, res: Response) => {
   try {

@@ -15,6 +15,9 @@ export class Parcela {
   @Column("float")
   tamaño!: number;
 
+  @Column({ type: "varchar", nullable: true })
+  ectarias!: string;
+
   @Column({ default: true })
   activa!: boolean;
 }
